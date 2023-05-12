@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <style>
+        body{
+            font: normal 15pt arial;
+            background-color: rgb(89, 0, 116);
+            color: rgb(255, 255, 255);
+        }
+        input{
+            width: 50px;
+        }
+        div#result{
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Somando valores</h1>
+        <input type="number" name="txtn1" id="txtn1">
+        <code>+</code>
+        <input type="number" name="txtn1" id="txtn2">
+        <input type="button" value="Somar" onclick="somar()">
+        <div id="result">Resultado</div>
+    <script>
+        function somar(){
+            var n1 = Number(document.getElementById('txtn1').value)
+            var n2 = Number(document.getElementById('txtn2').value)
+            var result = document.getElementById('result')
+            result.innerHTML = `${n1} + ${n2} = <strong>${n1+n2}</strong>`
+        }
+    </script>
+</body>
+</html>
